@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-US">
+  
+  <!-- The head area. -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Zone Reader Mockup</title>
+    <link href="styles/style.css" rel="stylesheet" />
+    <script async src="scripts/main.js"></script>
+  </head>
+  <body>
+    <h1>Zone Reader</h1>
+    
+    <p>
+      Welcome! This is a mockup for a component of a site that will handle importing zones for an account.
+      This was designed with security companies in mind.
+    </p>
+    <div>
+      <!--- File Import & Preview --->
+      <div class="zoneInputAndPreview" id="zoneInputAndPreview">
+        <input type="file" id="zoneListReader"/>
+        
+        <div class="importPreviewContainer" id="importPreviewContainer">
+          <pre class="previewOfImport" id="previewOfImport"></pre>
+        </div>
+      </div>
+      
+      <!--- Approve Import --->
+      <div>
+        <button class="approveImportBTN" id="approveImportBTN">Approve Import</button>
+      </div>
+      
+      <!--- Output --->
+      <div>
+        <pre class="output" id="output">
+        </pre>
+      </div>
+    </div>
+  </body>
+</html>

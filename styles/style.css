@@ -1,0 +1,30 @@
+/* Styling for making the site look nicer */
+
+html {
+  background-color: #333;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+div {
+  row-gap: 10px;
+}
+
+/* Styling for the zone import section. */
+.zoneInputAndPreview {
+  display: flex;
+  padding: 50px;
+}
+
+.importPreviewContainer {
+  overflow-y: scroll;
+  max-width: 200px;
+}
+
+.previewOfImport {
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  line-height: 2; /* Put a gap between the zones so it looks easier to read */
+}
