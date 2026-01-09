@@ -1,7 +1,11 @@
 // Setup the things the program will always need to know about
+const hideDisplayStyle = "none";
+
 const zoneListReader = document.getElementById("zoneListReader");
 zoneListReader.addEventListener("change", onZoneRead);
 const previewOfImport = document.getElementById("previewOfImport");
+const originalPreviewOfImportStyle = previewOfImport.style.display;
+previewOfImport.style.display = hideDisplayStyle;
 const approveImportBTN = document.getElementById("approveImportBTN");
 approveImportBTN.addEventListener("click", onApproveImportPressed);
 
@@ -18,6 +22,7 @@ function onZoneRead()
     return;
   }
   previewOfImport.replaceChildren();
+  previewOfImport.style.display = originalPreviewOfImportStyle;
   let file = files[0];
   let fr = new FileReader();
   fr.onload = function(event) {
