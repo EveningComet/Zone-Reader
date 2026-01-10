@@ -8,22 +8,24 @@
     
     <title>Zone Reader Mockup</title>
     <link href="styles/style.css" rel="stylesheet" />
-    <script async src="scripts/main.js"></script>
+    <script src="scripts/papaparse.min.js"></script>
+    <script async type="module" src="scripts/main.js"></script>
   </head>
   <body>
     <h1>Zone Reader</h1>
     
     <p>
-      Welcome! This is a mockup for a component of a site that will handle importing zones for an account.
+      Welcome. This is a mockup for a component of a site that will handle importing zones for an account.
       This was designed with security companies in mind.
     </p>
     <div>
       <!--- File Import & Preview --->
+      <button class="useTestZonesBTN" id="useTestZonesBTN">Use Test Zones</button>
       <div class="zoneInputAndPreview" id="zoneInputAndPreview">
         <input type="file" id="zoneListReader"/>
         
-        <div class="importPreviewContainer" id="importPreviewContainer">
-          <pre class="previewOfImport" id="previewOfImport"></pre>
+        <div class="importPreviewDisplayer" id="importPreviewDisplayer">
+          <pre class="importPreviewContainer" id="importPreviewContainer"></pre>
         </div>
       </div>
       
@@ -34,8 +36,22 @@
       
       <!--- Output --->
       <div>
-        <pre class="output" id="output">
-        </pre>
+        <div class="output" id="output">
+          <h2>Here is where the output will be displayed.</h2>
+          <div style="display: grid; grid-template-columns: max-content auto; row-gap: 1px; column-gap: 10px;">
+            <p style="font-weight: bold;">Account Name:</p>
+            <p class="accountName" id="accountName"></p>
+            <p style="font-weight: bold;">Address:</p>
+            <p>Address</p>
+          </div>
+          
+          <div class="outputtedZonesDisplayer" id="outputtedZonesDisplayer">
+            <h3>Zones</h3>
+            <div class="outputtedZonesContainer" id="outputtedZonesContainer">
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

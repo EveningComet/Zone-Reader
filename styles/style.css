@@ -5,11 +5,15 @@ html {
   color: white;
 }
 
+p {
+  font-size: 18px;
+}
+
 h1 {
   text-align: center;
 }
 div {
-  row-gap: 10px;
+  row-gap: 20px;
 }
 
 /* Styling for the zone import section. */
@@ -18,13 +22,21 @@ div {
   padding: 50px;
 }
 
-.importPreviewContainer {
+.importPreviewDisplayer {
   overflow-y: scroll;
-  max-width: 200px;
+  overflow-x: hidden;
+  max-width: 250px;
+  max-height: 300px;
 }
 
-.previewOfImport {
+.importPreviewContainer {
   overflow-wrap: break-word;
   white-space: pre-wrap;
-  line-height: 2; /* Put a gap between the zones so it looks easier to read */
+  font-size: 16px;
+  line-height: 2.5; /* Put a gap between the zones so it looks easier to read */
+}
+
+.outputtedZonesDisplayer {
+  overflow-y: scroll;
+  max-height: 300px;
 }
