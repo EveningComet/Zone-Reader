@@ -37,7 +37,7 @@ function onSetup()
 async function onUseTestZonesBTNPressed()
 {
   preZoneReadCleanup();
-  let testZones = await fetch("/data/test-account-cid.csv")
+  let testZones = await fetch("https://raw.githubusercontent.com/EveningComet/Zone-Reader/refs/heads/main/data/test-account-cid.csv")
     .then(response => {
       return response.text();
   })
